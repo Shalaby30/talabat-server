@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Disable</title>
+  <style>
+    html {
+      width: 280px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px;
+      box-sizing: border-box;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      overflow-y: auto;
+      /* allow scrolling */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* Chrome, Edge, Safari */
+    body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 5px;
+    }
+
+    .btn {
+      padding: 4px 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 11px;
+      /* font-weight: 500; */
+      transition: all 0.3s ease;
+    }
+
+    .btn-on {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .btn-on:hover {
+      background-color: #45a049;
+    }
+
+    .btn-on.active {
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    }
+
+    .btn-off {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .btn-off:hover {
+      background-color: #da190b;
+    }
+
+    .btn-off.active {
+      box-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
+    }
+
+    .note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 15px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .flex-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .item-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .item-toggle:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .item-toggle .txt {
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .container {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="note">LaFlame</div>
+
+  <div id="toggles-container" class="flex-container">
+    <!-- Toggles will be injected here -->
+  </div>
+
+
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
